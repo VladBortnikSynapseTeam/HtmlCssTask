@@ -3,10 +3,10 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   display: flex;
-  width: calc(100vw - 6vw);
   flex-direction: column;
   color: white;
   background-image: url(img/bgc.png);
+  min-width: 350px;
 }
 .bg-image {
   width: 100%;
@@ -14,11 +14,16 @@ body {
   z-index: -1;
 }
 header {
-  width: 100%;
+  width: calc(100% - 2vw);
   display: flex;
-  margin: 1.5vw 2.5vw;
+  position: fixed;
+  top: 0px;
   justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 10;
   font-size: 1vw;
+  padding: 1vw;
 }
 .login-btn {
   overflow: none;
@@ -37,7 +42,7 @@ header {
 }
 .header-links {
   display: flex;
-  gap: 3vw;
+  gap: 2vw;
   align-items: center;
 }
 a {
@@ -55,11 +60,11 @@ a {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  gap: 30px;
+  gap: 2vw;
 }
 .timeblock {
-  width: 100px;
-  height: 100px;
+  width: 5vw;
+  height: 5vw;
   background-color: #121212;
   display: flex;
   flex-direction: column;
@@ -74,7 +79,7 @@ a {
 .order-course {
   margin: 0px;
   width: 100%;
-  height: 120px;
+  padding: 5vh 0vh 5vh 0vh;
   background: #121212;
   display: flex;
   align-items: center;
@@ -129,7 +134,7 @@ p {
 }
 .main-container {
   width: 80%;
-  padding-top: 150px;
+  padding-top: 10vh;
   display: flex;
   flex-direction: column;
   gap: 100px;
@@ -141,10 +146,14 @@ p {
   gap: 100px;
   font-weight: bold;
 }
+.deals-text {
+  width: 100%;
+  font: 1em sans-serif;
+}
 .computer {
-  width: 350px;
-  height: 350px;
-  margin-top: 40px;
+  width: 30vw;
+  height: 30vw;
+  margin-top: 3vw;
 }
 .frame {
   background-size: contain;
@@ -154,7 +163,6 @@ p {
 }
 .default-text {
   font-weight: normal;
-  width: 600px;
 }
 .quick-start {
   width: 100%;
@@ -216,7 +224,6 @@ p {
 }
 .partners-container {
   width: 100%;
-  height: 100px;
   gap: 50px;
   display: flex;
   flex-direction: column;
@@ -227,7 +234,7 @@ p {
   flex-wrap: wrap;
 }
 .partners-block {
-  width: 250px;
+  width: 270px;
   height: 100px;
   background-position: center;
   border-top: 1px solid white;
@@ -246,10 +253,9 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 300px;
 }
 .learn-scale-container {
-  width: 50%;
+  width: 100%;
   height: 600px;
 
   display: flex;
@@ -274,9 +280,8 @@ p {
   background: linear-gradient(#c89afc, #7c6afa);
 }
 .learn-scale-block {
-  width: 230px;
+  width: 40%;
   height: 100px;
-
   text-align: right;
   display: flex;
   align-items: center;
@@ -318,6 +323,7 @@ p {
   border: none;
   padding: 0.7vw 2.4vw;
   border-radius: 1.5rem;
+  border: 1px solid white;
   color: white;
   font-size: 1.1vw;
   cursor: pointer;
@@ -331,6 +337,7 @@ p {
   align-items: center;
   justify-content: center;
   gap: 30px;
+  margin-bottom: 50px;
 }
 .input-container {
   width: 50%;
@@ -366,6 +373,12 @@ input {
   justify-content: center;
   gap: 10px;
 }
+.menu-icon {
+  width: 10vw;
+  height: 10vw;
+  display: none;
+  cursor: pointer;
+}
 .social-image {
   width: 40px;
   height: 40px;
@@ -374,4 +387,128 @@ input {
   align-items: center;
   border-radius: 50%;
   background: linear-gradient(#c89afc, #7c6afa);
+}
+@media screen and (max-width: 500px) {
+  header {
+    width: calc(100% - 2vw);
+    position: relative;
+  }
+  .main-container {
+    width: 90%;
+  }
+  .computer {
+    width: 50vw;
+    height: 50vw;
+  }
+  .deals {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-links {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .timeblock {
+    width: 10vw;
+    height: 10vw;
+  }
+  .course-info {
+    padding: 5vw;
+  }
+  .logo {
+    height: 10vw;
+    width: 10vw;
+  }
+  .login-btn {
+    padding: 1vw;
+    border-radius: 50%;
+  }
+  .eclipse-icon {
+    width: 15vw;
+    height: 15vw;
+  }
+  .partners-container {
+    align-items: center;
+  }
+  .partners-block {
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid white;
+  }
+  .teachers-container {
+    align-items: center;
+  }
+  .your-teachers {
+    justify-content: center;
+  }
+  .partners-blocks {
+    width: 100%;
+    align-items: center;
+  }
+  .teacher-photos {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 3vw;
+  }
+  .order-course {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info-scale {
+    margin: 0px;
+  }
+  .students,
+  .info-scale {
+    width: 80%;
+  }
+  .order-btn {
+    width: 80%;
+    padding: 4vw;
+    margin: 0px;
+    font-size: 4vw;
+  }
+  .get-work-blocks {
+    flex-direction: column;
+    align-items: center;
+  }
+  .learn-scale-container {
+    width: 100%;
+  }
+  .login-btn,
+  .order-btn,
+  .input-btn,
+  .teacher-btn {
+    font-size: 3vw;
+    border-radius: 2vw;
+  }
+  input,
+  .input-container {
+    border-radius: 2vw;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .partners-container {
+    align-items: center;
+  }
+  .partners-blocks {
+    align-items: center;
+  }
+  .partners-block {
+    border: none;
+    width: calc(50% - 1px);
+    border-bottom: 1px solid white;
+  }
+  .partners-block:nth-child(2n -1) {
+    border-right: 1px solid white;
+  }
+  .partners-block:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+  .quick-start-text {
+    justify-content: center;
+  }
 }
