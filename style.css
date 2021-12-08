@@ -447,6 +447,7 @@ input {
   .partners-blocks {
     width: 100%;
     align-items: center;
+    flex-direction: column;
   }
   .teacher-photos {
     flex-direction: column;
@@ -497,18 +498,19 @@ input {
   .partners-blocks {
     align-items: center;
   }
-  .partners-block {
-    border: none;
-    width: calc(50% - 1px);
-    border-bottom: 1px solid white;
-  }
-  .partners-block:nth-child(2n -1) {
-    border-right: 1px solid white;
-  }
-  .partners-block:nth-last-child(-n + 2) {
-    border-bottom: none;
-  }
   .quick-start-text {
     justify-content: center;
+  }
+  .teacher-photos {
+    width: 100%;
+    justify-content: center;
+  }
+  .partners-block {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid white;
+  }
+  .partners-block:nth-last-child(1) {
+    border-bottom: none;
   }
 }
