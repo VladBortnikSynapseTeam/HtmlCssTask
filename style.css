@@ -19,8 +19,6 @@ header {
   position: fixed;
   top: 0px;
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
   z-index: 10;
   font-size: 1vw;
   padding: 1vw;
@@ -53,7 +51,7 @@ a {
   width: calc(100% - 30vw);
   font-size: 1.5vw;
   color: white;
-  padding: 15vw;
+  padding: 14vw;
   padding-top: 10vw;
 }
 .timeblocks-container {
@@ -62,18 +60,33 @@ a {
   justify-content: flex-start;
   gap: 2vw;
 }
+.timeblock-numbers {
+  font-size: x-large;
+}
+.students-number {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .timeblock {
-  width: 5vw;
+  width: 4vw;
   height: 5vw;
+  padding: 20px 30px;
   background-color: #121212;
   display: flex;
   flex-direction: column;
+  font-weight: bold;
   align-items: center;
   justify-content: center;
 }
 .grey-font {
-  color: gray;
-  font-size: smaller;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 160%;
+  color: white;
+  opacity: 0.5;
 }
 
 .order-course {
@@ -83,6 +96,7 @@ a {
   background: #121212;
   display: flex;
   align-items: center;
+  height: 60px;
 }
 .order-btn {
   overflow: none;
@@ -111,15 +125,26 @@ p {
   margin-right: 50px;
   gap: 10px;
 }
+.main-theme-header {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 140%;
+}
 .scale {
   width: 100%;
-  height: 2px;
+  height: 6px;
   background-color: white;
 }
 .scale-fill {
   width: 60%;
-  height: 2px;
+  height: 6px;
   background: linear-gradient(to right, #df5950, #451046);
+}
+.eclipse-icon {
+  width: 4vw;
+  height: 4vw;
 }
 .scale-numbers {
   display: flex;
@@ -148,7 +173,19 @@ p {
 }
 .deals-text {
   width: 100%;
-  font: 1em sans-serif;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.theme-header {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
 }
 .computer {
   width: 30vw;
@@ -161,18 +198,30 @@ p {
   background-image: url(img/frame.png);
   padding: 30px;
 }
+.deals-header {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 140%;
+}
 .default-text {
+  font-family: Roboto;
+  font-style: normal;
   font-weight: normal;
+  font-size: 16px;
+  line-height: 160%;
 }
 .quick-start {
   width: 100%;
   display: flex;
-  gap: 40px;
+  gap: 20px;
   flex-direction: column;
 }
 .quick-start-text {
   display: flex;
   gap: 30px;
+  align-items: center;
 }
 .quick-start-scale {
   width: 100%;
@@ -232,18 +281,32 @@ p {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+.week-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 160%;
 }
 .partners-block {
   width: 270px;
   height: 100px;
   background-position: center;
-  border-top: 1px solid white;
-  border-right: 1px solid white;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
   background-image: url(img/msi-logo.png);
   background-repeat: no-repeat;
 }
 .partners-block:nth-child(-n + 4) {
   border-top: none;
+}
+.earned {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 .partners-block:nth-child(4n) {
   border-right: none;
@@ -280,7 +343,7 @@ p {
   background: linear-gradient(#c89afc, #7c6afa);
 }
 .learn-scale-block {
-  width: 40%;
+  width: 50%;
   height: 100px;
   text-align: right;
   display: flex;
@@ -306,10 +369,12 @@ p {
   width: 100%;
   display: flex;
   gap: 50px;
+  align-items: center;
 }
 .teacher-photos {
-  width: 80%;
+  width: 100%;
   display: flex;
+  justify-content: center;
   gap: 50px;
 }
 .teacher-card {
@@ -344,18 +409,17 @@ p {
   justify-content: space-between;
   border-radius: 30px;
   display: flex;
-  background-color: white;
-  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.25);
 }
 input {
-  width: 30%;
+  width: 100%;
+  padding-left: 30px;
   height: 40px;
   margin: 0px;
   border-radius: 20px 0px 0px 20px;
   outline: none;
   border: none;
-  background-color: white;
-  opacity: 0.6;
+  background: none;
 }
 .input-btn {
   overflow: none;
@@ -388,22 +452,53 @@ input {
   border-radius: 50%;
   background: linear-gradient(#c89afc, #7c6afa);
 }
+::placeholder {
+  color: white;
+}
 @media screen and (max-width: 500px) {
   header {
     width: calc(100% - 2vw);
     position: relative;
   }
+  .deals-header {
+    width: 100%;
+    text-align: center;
+  }
+  .timeblocks-container {
+    gap: 20px;
+  }
+  .percent-numbers {
+    font-size: 15px;
+  }
+  .quick-start-scale-part {
+    width: 50px;
+  }
+  .grey-font {
+    font-size: 15px;
+  }
   .main-container {
-    width: 90%;
+    width: 95%;
+  }
+  .main-theme-header {
+    font-size: 25px;
   }
   .computer {
     width: 50vw;
     height: 50vw;
   }
+  .bg-image {
+    height: 300px;
+    object-fit: cover;
+  }
   .deals {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
+  }
+  .theme-header {
+    font-size: 25px;
+    text-align: center;
   }
   .header-links {
     display: none;
@@ -412,8 +507,11 @@ input {
     display: block;
   }
   .timeblock {
-    width: 10vw;
-    height: 10vw;
+    padding: 7vw;
+  }
+  .course-info {
+    justify-content: center;
+    align-items: center;
   }
   .course-info {
     padding: 5vw;
@@ -453,11 +551,16 @@ input {
     flex-direction: column;
   }
   h1 {
-    font-size: 3vw;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 64px;
+    line-height: 140%;
   }
   .order-course {
     flex-direction: column;
     align-items: center;
+    height: 300px;
   }
   .info-scale {
     margin: 0px;
@@ -484,11 +587,26 @@ input {
   .input-btn,
   .teacher-btn {
     font-size: 3vw;
-    border-radius: 2vw;
+    border-radius: 50vw;
+    padding: 10px;
   }
   input,
   .input-container {
-    border-radius: 2vw;
+    border-radius: 50vw;
+    width: 100%;
+  }
+  .default-text {
+    font-size: 13px;
+    text-align: center;
+  }
+  .quick-start-text {
+    justify-content: space-around;
+  }
+  .week-text {
+    font-size: 12px;
+  }
+  .learn-scale-block {
+    width: 100%;
   }
 }
 @media screen and (max-width: 1024px) {
